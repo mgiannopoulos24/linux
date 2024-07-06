@@ -45,7 +45,7 @@ void arc_init_IRQ(void)
 		unsigned int ienb;
 
 		ienb = read_aux_reg(AUX_IENABLE);
-		ienb &= ~(1 << i);
+		ienb &= ~(1U << i);
 		write_aux_reg(AUX_IENABLE, ienb);
 	}
 }

@@ -21,7 +21,7 @@
 unsigned long
 alpha_read_fp_reg (unsigned long reg)
 {
-	unsigned long val;
+	unsigned long val=0;
 
 	if (unlikely(reg >= 32))
 		return 0;
@@ -130,7 +130,7 @@ EXPORT_SYMBOL(alpha_write_fp_reg);
 unsigned long
 alpha_read_fp_reg_s (unsigned long reg)
 {
-	unsigned long val;
+	unsigned long val=0;
 
 	if (unlikely(reg >= 32))
 		return 0;

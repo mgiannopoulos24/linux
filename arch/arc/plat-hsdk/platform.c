@@ -23,7 +23,7 @@ int arc_hsdk_axi_dmac_coherent __section(".data") = 0;
 
 #define SDIO_BASE		(ARC_PERIPHERAL_BASE + 0xA000)
 #define SDIO_UHS_REG_EXT	(SDIO_BASE + 0x108)
-#define SDIO_UHS_REG_EXT_DIV_2	(2 << 30)
+#define SDIO_UHS_REG_EXT_DIV_2    (1UL << 30)
 
 #define HSDK_GPIO_INTC          (ARC_PERIPHERAL_BASE + 0x3000)
 

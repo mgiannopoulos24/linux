@@ -88,7 +88,7 @@ csum_partial_cfu_aligned(const unsigned long __user *src, unsigned long *dst,
 	unsigned long carry = 0;
 
 	while (len >= 0) {
-		unsigned long word;
+		unsigned long word = 0;
 		if (__get_word(ldq, word, src))
 			return 0;
 		checksum += carry;
