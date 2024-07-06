@@ -159,7 +159,12 @@ static void
 do_remote_read(void *data)
 {
 	union remote_data *x = data;
-	x->retval = alpha_rtc_read_time(NULL, x->tm);
+	struct tm temp_tm;
+	int temp_retval;
+
+	temp_retval = alpha_rtc_read_time(NULL, &temp_tm);
+	x->tm = temp_tm;
+	x->retval = temp_retval;
 }
 
 static int
@@ -178,7 +183,11 @@ static void
 do_remote_set(void *data)
 {
 	union remote_data *x = data;
-	x->retval = alpha_rtc_set_time(NULL, x->tm);
+	struct tm temp_tm = x->tm;
+	int temp_retval;
+
+	temp_retval = alpha_rtc_set_time(NULL, &temp_tm);
+	x->retval = temp_retval;
 }
 
 static int
