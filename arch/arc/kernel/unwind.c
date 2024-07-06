@@ -217,7 +217,7 @@ static void init_unwind_table(struct unwind_table *table, const char *name,
 void __init arc_unwind_init(void)
 {
 	init_unwind_table(&root_table, "kernel", _text, _end - _text, NULL, 0,
-			  __start_unwind, __end_unwind - __start_unwind,
+			  __start_unwind, (uintptr_t)__end_unwind - (uintptr_t)__start_unwind,
 			  NULL, 0);
 	  /*__start_unwind_hdr, __end_unwind_hdr - __start_unwind_hdr);*/
 

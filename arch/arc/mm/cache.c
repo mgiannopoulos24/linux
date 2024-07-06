@@ -101,7 +101,7 @@ int arc_cache_mumbojumbo(int c, char *buf, int len)
 {
 	struct cpuinfo_arc_cache *p_ic = &ic_info, *p_dc = &dc_info;
 	struct bcr_cache ibcr, dbcr;
-	int vipt, assoc;
+	int vipt, assoc=0;
 	int n = 0;
 
 	READ_BCR(ARC_REG_IC_BCR, ibcr);

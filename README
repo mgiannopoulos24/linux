@@ -26,4 +26,6 @@ What I think I fixed:
 - arch/alpha/lib/fpreg.c:177:9: error: Uninitialized variable: val [uninitvar]
 - arch/alpha/lib/fpreg.c:177:9: error: Uninitialized variable: val [uninitvar]
 - arch/arc/plat-hsdk/platform.c:313:12: error: Signed integer overflow for expression '2<<30'. [integerOverflow]
-- arch/arckernel/intc-compact.c:48:15: error: Signed integer overflow for expression '1<<i'. [integerOverflow]
+- arch/arc/kernel/intc-compact.c:48:15: error: Signed integer overflow for expression '1<<i'. [integerOverflow]
+- arch/arc/kernel/unwind.c:220:35: error: Subtracting pointers that point to different objects [comparePointers]
+- arch/arc/mm/cache.c:120:28: error: Uninitialized variable: assoc [uninitvar]
